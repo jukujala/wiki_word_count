@@ -1,0 +1,7 @@
+
+* What?
+  Calculates word counts of Wikipedia from input given by https://github.com/jukujala/wiki_markup_to_text
+
+* Usage
+  cat corpus.txt | python decode_strings.py | python build_word_token_dict.py word_tokens.pickle
+
