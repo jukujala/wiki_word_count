@@ -2,6 +2,12 @@
 * What?
   Calculates word counts of Wikipedia from input given by https://github.com/jukujala/wiki_markup_to_text
 
+* Input
+  Wiki-text format: each line has one Wiki article in format "title tab string-escaped content"
+
+* Output
+  Pickled dictionary mapping words to occurences
+
 * Usage
   cat corpus.txt | python decode_strings.py | python build_word_token_dict.py word_tokens.pickle
 
