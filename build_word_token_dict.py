@@ -2,8 +2,8 @@ import cPickle
 import cStringIO
 import sys
 
-NCOUNTLIMIT = 5
-NMAXSTRINGLEN = 17
+NCOUNTLIMIT = 5 #prune words with less than NCOUNTLIMIT occurences
+NMAXSTRINGLEN = 17 #prune words shorter than NMAXSTRINGLEN
 
 def create_token_dict(f):
   """
@@ -15,6 +15,8 @@ def create_token_dict(f):
   i = 0
   #count different words
   for t in f:
+    t = t.strip()
+    #if t.isdigit(): #limit to digits only
     if len(t) < NMAXSTRINGLEN:
       d[t] = d.setdefault(t,0)+1
   #prune words with less than NCOUNTLIMIT occurences
